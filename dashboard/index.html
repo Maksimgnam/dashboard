@@ -1,0 +1,2504 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            position: absolute;
+            width: 100%;
+            height:  100vh ;
+            
+           
+            
+           
+
+        }
+        .menu__bar{
+            position: fixed;
+            width: 344px;
+            height: 1496px;
+            background-color: white;
+        }
+        .logo__text{
+
+            position: absolute;
+            width: 99px;
+            height: 54px;
+            left: 108.58px;
+            top: 40px;
+
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 54px;
+
+
+
+
+            color: #0E6EFF;
+
+        }
+        .dashboard{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 284px;
+            height: 60px;
+            left: 30px;
+            top: 135px;
+            background: #0E6EFF;
+            border-radius: 10px;
+
+
+        }
+        .dashboard:hover{
+            transform: scale(1.04);
+            transition: all 1s ease;
+        }
+        .home__img{
+            margin: 10px;
+        }
+       
+        .text{
+            font-size: 25px;
+            margin: 14px;
+            color: white;
+
+        }
+        .menu__bar__block{
+            display: flex;
+            position: relative;
+            top: 150px;
+            left: 20px;
+            width: 284px;
+            height: 500px;
+            background: #ffffff;
+            padding: 20px;
+          
+        }
+        .block__one{
+            border-radius: 10px;
+            display: flex;
+            width: 300px;
+            height: 60px;
+            background-color: white;
+            top: 10px;
+            padding: 4px 4px;
+            left: 10px;
+            transition: 1s;
+        }
+        .block__one:hover{
+            background-color:   #01BEFF;
+            color: white;
+        }
+        .walet__text{
+            font-size: 20px;
+            margin: 14px;
+            
+        }
+        .walet__img{
+            margin: 14px;
+            line-height: 21px;
+
+            
+        }
+        .block__two{
+            border-radius: 10px;
+            display: flex;
+            position: relative;
+            width: 300px;
+            height: 60px;
+            top: 50px;
+            background-color: white;
+           
+            padding: 4px 4px;
+            left: -162px;
+            transition: 1s;
+        }
+        .block__two:hover{
+            background-color: #01BEFF;
+            color: white;
+        }
+        .card__text{
+            font-size: 20px;
+            margin: 14px;
+            
+        }
+        .card__img{
+            margin: 14px;
+
+            
+        }
+        .block__three{
+            border-radius: 10px;
+            display: flex;
+            position: relative;
+            width: 300px;
+            height: 60px;
+            top: 100px;
+            background-color: white;
+           
+            padding: 4px 4px;
+            left: -320px;
+            transition: 1s;
+        }
+        .block__three:hover{
+            background-color: #01BEFF;
+            color: white;
+        }
+        .doc__text{
+            font-size: 20px;
+            margin: 14px;
+            
+        }
+        .doc__img{
+            margin: 14px;
+        }
+        .block__four{
+            border-radius: 10px;
+            display: flex;
+            position: relative;
+            width: 300px;
+            height: 60px;
+            top: 150px;
+            background-color: white;
+           
+            padding: 4px 4px;
+            left: -470px;
+            transition: 1s;
+        }
+        .block__four:hover{
+            background-color:  #01BEFF;
+            color: white;
+        }
+        .set__text{
+            font-size: 20px;
+            margin: 14px;
+            
+        }
+        .set__img{
+            margin: 14px;
+        }
+        .block__five{
+            border-radius: 10px;
+            display: flex;
+            position: relative;
+            width: 300px;
+            height: 60px;
+            top: 200px;
+            background-color: white;
+           
+            padding: 4px 4px;
+            left: -610px;
+            transition: 1s;
+        }
+        .block__five:hover{
+            background-color: #01BEFF;
+            color: white;
+        }
+        .tran__text{
+            font-size: 20px;
+            margin: 14px;
+            
+        }
+        .tran__img{
+            margin: 14px;
+            
+        }
+        img{
+            font-size: 24px;
+        }
+        .block__six{
+           
+            position: relative;
+            width: 600px;
+            height: 60px;
+            top: 300px;
+            background-color: white;
+           
+            padding: 4px 4px;
+            left: -795px;
+        }
+        h1{
+            font-size: 20px;
+        }
+       
+        .footer__text{
+            position: absolute;
+            width: 212px;
+            
+height: 21px;
+
+top: -15px;
+
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 21px;
+color: #171B1E;
+
+        }
+        .h1{
+            position: absolute;
+width: 236px;
+height: 21px;
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+
+        }
+        .h2{
+         
+position: absolute;
+width: 243px;
+height: 21px;
+left: 2px;
+top: 20px;
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height */
+
+
+/* Gray */
+
+color: #72757A;
+        }
+        .container{
+            display: flex;
+            position: absolute;
+          
+            width: 1526px;
+            height: 1000px;
+            background-color: #f5f5f5;  
+
+           }
+           .header{
+               display: flex;
+              position: absolute;
+
+             
+              background-color: #f5f5f5;
+              left: 350px;
+
+           }
+           .text__dash{
+               
+               margin: 25px;
+               font-size: 40px;
+           }
+           .inp{
+               position: absolute;
+           
+width: 300px;
+height: 50px;
+left: 420px;
+top: 18px;
+
+
+background: #FFFFFF;
+box-shadow: 0px 8px 25px rgba(226, 226, 226, 0.25);
+border-radius: 15px;
+           }
+           .image__block{
+            position: absolute;
+left: 5.67%;
+right: 5.67%;
+top: 36px;
+left: 680px;
+bottom: 22.36%;
+
+/* Gray */
+color: #72757A;
+           }
+           .image__bell{
+            position: absolute;
+left: 5.67%;
+right: 5.67%;
+top: 40px;
+left: 800px;
+bottom: 22.36%;
+
+/* Gray */
+color: #72757A;
+               
+
+           }
+           .five__block{
+            position: absolute;
+left: 5.67%;
+right: 5.67%;
+top: 31px;
+left: 813px;
+
+bottom: 22.36%;
+
+/* Gray */
+color: #72757A;
+               
+
+           }
+           .five{
+               text-align: center;
+               border-radius: 10px;
+              
+               height: 16px;
+               width: 18px;
+               background-color: yellow;
+           }
+         
+           .image__mail{
+            position: absolute;
+left: 5.67%;
+right: 5.67%;
+top: 40px;
+left: 850px;
+bottom: 22.36%;
+
+/* Gray */
+color: #72757A;
+               
+
+           }
+           .twenthree{
+               text-align: center;
+            position: absolute;
+            height: 20px;
+            width: 25px;
+            border-radius: 10px;
+            left: 5.67%;
+            right: 5.67%;
+            top: 29px;
+            left: 868px;
+
+            bottom: 22.36%;
+
+/* Gray */
+            color: #ffffff ;
+            background-color: yellow
+          
+           }
+           .login{
+               display: flex;
+
+               
+            position: absolute;
+            left: 5.67%;
+            right: 5.67%;
+            top: 16px;
+            left: 910px;
+
+            bottom: 22.36%;
+
+/* Gray */
+            color: #72757A;
+
+           }
+           .log{
+            position: absolute;
+            width: 155px;
+            height: 18px;
+            top: 27px;
+            left: 65px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+
+/* Gray */
+
+            color: #72757A;
+
+           }
+           .login_text{
+            position: absolute;
+           
+
+      
+            top: -3px;
+            left: 65px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 31px;
+
+            color: #000000;
+
+           }
+        
+           .green{
+               display: flex;
+            position: absolute;
+            width: 240px;
+            height: 100px;
+            left: 50px;
+            top: 120px;
+
+            background: rgb(18, 205, 18);
+            border-radius: 20px;
+           }
+           .green:hover{
+            transform: scale(1.04);
+            transition: all 1s ease;
+           }
+       
+           .green__img{
+         
+            position: absolute;
+            height: 40px;
+            width: 30px;
+            left: 20px;
+            right: 0%;
+            top: 40px;
+            bottom: 0.31%;
+
+
+           }
+           .green__text{
+            position: absolute;
+            width: 100px;
+            height: 10px;
+            left: 60px;
+            top: 17px;
+
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 27px;
+            line-height: 39px;
+
+            color: #FFFFFF;
+           }
+           .green__text__two{
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            left: 60px;
+            top: 50px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+
+            color: #FFFFFF;
+
+           }
+           .green__block{
+            position: absolute;
+            border-radius: 50%;
+            width: 136px;
+            height: 136px;
+            left: 170px ;           
+            top: 30px ;
+
+            background: #FFFFFF;
+            opacity: 0.1;
+           }
+        
+           .blue{
+            position: absolute;
+            left: 320px;
+            width: 240px;
+            height: 100px;
+            top: 120px;         
+            background: #01BEFF;
+            border-radius: 20px;
+   
+           }
+           .blue:hover{
+            transform: scale(1.02);
+            transition: all 1s ease;
+           }
+       
+       
+           .blue__img{
+            position: absolute;
+            height: 40px;
+            width: 30px;
+            left: 20px;
+            right: 0%;                      
+            top: 40px;
+            bottom: 0.31%;
+         
+     
+
+
+           }
+           .blue2__img{
+            position: absolute;
+            height: 40px;
+            width: 30px;
+            left: 25px;
+            right: 0%;          
+            top: 42px;
+            bottom: 0.31%;
+         
+     
+
+
+           }
+           .blue__text{
+            position: absolute;
+            width: 100px;
+            height: 10px;
+            left: 60px;
+            top: 17px;
+
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 27px;
+            line-height: 39px;
+
+            color: #FFFFFF;
+
+   
+           }
+           .blue__text__two{
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            left: 60px;
+            top: 50px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+
+            color: #FFFFFF;
+
+
+
+           }
+           .blue__block{
+            position: absolute;
+            border-radius: 50%;
+            width: 136px;
+            height: 136px;
+            left: 170px ;           
+            top: 30px ;
+
+            background: #FFFFFF;
+            opacity: 0.1;
+  
+           }
+           
+           .yellow{
+            position: absolute;
+            width: 240px;
+            height: 100px;
+            left: 600px;
+            top: 120px;
+            background-color: #FFBF26;
+            border-radius: 20px;
+         
+           }
+           .yellow:hover{
+            transform: scale(1.04);
+            transition: all 1s ease;
+           }
+       
+       
+           .yellow__img{
+            position: absolute;
+            left: 25px;
+            right: 0%;
+            top: 40px;
+            bottom: 0%;
+
+
+        
+     
+
+
+           }
+           .yellow2__img{
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            left: 31px;
+            top: 40px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+
+            color: #FFFFFF;
+          
+         
+     
+
+
+           }
+           .yellow__text{
+            position: absolute;
+            width: 100px;
+            height: 10px;
+            left: 60px;
+            top: 17px;
+
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 27px;
+            line-height: 39px;
+
+            color: #FFFFFF;
+
+        
+   
+           }
+           .yellow__text__two{
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            left: 60px;
+            top: 50px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+
+            color: #FFFFFF;
+     
+
+
+           }
+           .yellow__block{
+            position: absolute;
+            border-radius: 50%;
+            width: 136px;
+            height: 136px;
+            left: 170px ;           
+            top: 30px ;
+
+            background: #FFFFFF;
+            opacity: 0.1;
+        
+           }
+
+
+
+
+           
+
+
+
+
+           .red{
+            position: absolute;
+            width: 240px;
+            height: 100px;
+            left: 900px ;
+            top: 120px;
+
+            background: #FF684D;
+            border-radius: 20px;
+            
+ 
+           }
+           .red:hover{
+            transform: scale(1.04);
+            transition: all 1s ease;
+           }
+       
+       
+           .red__img{
+            position: absolute;
+            left: 25px;
+            right: 0%;
+            top: 40px;
+            bottom: 0%;             
+         
+
+        
+     
+
+
+           }
+           .red2__img{
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            left: 37px;
+            top: 46px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+
+            color: #FFFFFF;
+           }
+           .red3__img{
+            height: 4px;
+            position: absolute;
+            left: 30px;
+
+
+            top: 45px;
+
+
+            background: #FFFFFF;
+         
+           }
+      
+      
+           .red__text{
+            position: absolute;
+            width: 100px;
+            height: 10px;
+            left: 60px;
+            top: 17px;
+
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 27px;
+            line-height: 39px;
+
+            color: #FFFFFF;
+
+        
+
+        
+   
+           }
+           .red__text__two{
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            left: 60px;
+            top: 50px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+
+            color: #FFFFFF;
+     
+          
+
+
+           }
+           .red__block{
+            position: absolute;
+            border-radius: 50%;
+            width: 136px;
+            height: 136px;
+            left: 170px ;           
+            top: 30px ;
+
+            background: #FFFFFF;
+            opacity: 0.1;
+        
+           } 
+           .transaction{
+               border: 1px solid black;
+            position: absolute;
+width: 700px;
+height: 400px;
+left: 50px;
+top: 240px;
+
+background: #FFFFFF;
+border-radius: 20px;
+
+           }
+           .transaction:hover{
+            transform: scale(1.04);
+            transition: all 1s ease;
+           }
+           .trans__h1{
+            position: absolute;
+width: 230px;
+height: 31px;
+left: 30px;
+top: 7px;
+
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 31px;
+
+/* Black */
+
+color: #171B1E;
+           }
+           .blue-block{
+            position: absolute;
+width: 42px;
+height: 42px;
+left: 25px;
+top: 60px;
+
+background: #0E6EFF;
+border-radius: 5px;
+           }
+           .blue-block-text{
+            position: absolute;
+width: 135px;
+height: 18px;
+left: 75px;
+top: 60px;
+
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+
+color: #0E6EFF;
+
+           }
+           .blue-block-text-two{
+            position: absolute;
+            width: 135px;
+            height: 18px;
+            left: 75px;
+            top: 80px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 18px;
+
+            color: black;
+
+           }
+           .yellow-block{
+            position: absolute;
+            left: 25px;
+            top: 120px;
+            border-radius: 5px;
+            width: 42px;
+            height: 42px;
+            background:  #FFBF26;
+
+           }
+           .yellow-block-text{
+            position: absolute;
+            width: 135px;
+            height: 18px;
+            left: 75px;
+            top:  119px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+
+
+            color: #01BEFF;
+  
+
+           }
+           .yellow-block-text-two{
+            position: absolute;
+            width: 150px;
+            height: 23px;
+            left: 75px ;
+            top: 140px;         
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 23px;
+
+/* Black */
+
+            color: #171B1E;
+
+    
+           }
+           .green-block{
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            top: 180px;
+            left: 25px;
+        
+
+            background: #00D171;
+            border-radius: 5px;
+          
+
+           }
+           .green-block-text{
+            position: absolute;
+            width: 135px;
+            height: 18px;
+            left: 75px;
+            top:  180px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: #0E6EFF;
+  
+
+           }
+           .green-block-text-two{
+            position: absolute;
+            width: 180px;
+            height: 23px;
+            left: 75px;
+            top: 200px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;           
+            line-height: 23px;
+            color: #171B1E;
+    
+
+    
+           }
+           .red-block{
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            left: 25px;
+            top: 250px;
+
+            background: #FF684D;
+            border-radius: 5px;         
+           }
+           .red-block-text{
+            position: absolute;
+            width: 135px;
+            height: 18px;
+            left:  75px;
+            top: 250px;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+
+            color: #0E6EFF;
+           }
+           .red-block-text-two{
+            position: absolute;
+            width: 135px;
+            height: 23px;
+            left: 75px;
+            top:  270px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 23px;
+
+/* Black */
+
+            color: #171B1E;
+           }
+           .amount{
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            left: 240px;
+            top: 60px;
+
+
+            background: #01BEFF;
+            opacity: 0.1;
+            border-radius: 5px;
+           }
+           .amount__img{
+            position: absolute;
+            left: 250px;
+            top: 75px;
+           
+            right: 0%;
+           
+            bottom: 0.31%;
+
+            
+           }
+           .amount__yellow{
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            left: 240px;
+            top: 120px;
+            background: #FFBA14;
+            opacity: 0.1;
+            border-radius: 5px;         
+           }
+           .amount__yellow__img{
+            position: absolute;
+            left: 250px;
+            right: 0%;
+            top: 135px;
+            bottom: 0.31%; 
+                  
+           }
+           .amount__red{
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            left: 240px;
+            top: 185px;
+            background:  #FF684D ;
+            opacity: 0.1;
+            border-radius: 5px;         
+           }
+           .amount__red__img{
+            position: absolute;
+            left: 250px;
+            right: 0%;
+            top: 200px;
+            bottom: 0.31%; 
+                  
+           }
+           .amount__green{
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            left: 240px;
+            top: 255px;
+            background:  #03B664 ;
+            opacity: 0.1;
+            border-radius: 5px;         
+           }
+           .amount__green__img{
+            position: absolute;
+            left: 250px;
+            right: 0%;
+            top: 270px;
+            bottom: 0.31%; 
+                  
+           }
+           .amount_text{
+            position: absolute;
+            width: 135px;
+            height: 23px;
+            left: 290px;
+            top: 80px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 23px;
+
+/* Black */
+
+            color: #171B1E;
+           }
+           .amount_text_one{
+            position: absolute;
+            width: 53px;
+            height: 18px;
+            left: 290px;
+            top: 64px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+
+/* Gray */
+
+            color: #72757A;
+
+           }
+           .amount_yellow_text{
+            position: absolute;
+            width: 135px;
+            height: 23px;
+            left: 290px;
+            top: 140px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 23px;
+
+/* Black */
+
+            color: #171B1E;
+           }
+           .amount_yellow_text_one{
+            position: absolute;
+            width: 53px;
+            height: 18px;
+            left: 290px;
+            top: 124px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+
+/* Gray */
+
+            color: #72757A;
+
+           }
+           .amount_red_text{
+            position: absolute;
+            width: 135px;
+            height: 23px;
+            left: 290px;
+            top: 200px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 23px;
+
+/* Black */
+
+            color: #171B1E;
+           }
+           .amount_red_text_one{
+            position: absolute;
+            width: 53px;
+            height: 18px;
+            left: 290px;
+            top: 184px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+
+/* Gray */
+
+            color: #72757A;
+
+           }
+           .amount_green_text{
+            position: absolute;
+            width: 135px;
+            height: 23px;
+            left: 290px;
+            top: 270px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 23px;
+
+/* Black */
+
+            color: #171B1E;
+           }
+           .amount_green_text_one{
+            position: absolute;
+            width: 53px;
+            height: 18px;
+            left: 290px;
+            top: 254px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+
+/* Gray */
+
+            color: #72757A;
+
+           }
+           .ago_one_text{
+            position: absolute;
+            width: 64px;
+            height: 18px;
+            left: 420px;
+            top: 70px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+
+/* Gray */
+
+            color: #72757A;
+        
+           }
+           .ago_two_text{
+            position: absolute;
+            width: 64px;
+            height: 18px;
+            left: 420px;
+            top: 130px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+
+/* Gray */
+
+            color: #72757A;
+        
+           }
+           .ago_three_text{
+            position: absolute;
+            width: 64px;
+            height: 18px;
+            left: 420px;
+            top: 194px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+
+/* Gray */
+
+            color: #72757A;
+        
+           }
+           .ago_four_text{
+            position: absolute;
+            width: 64px;
+            height: 18px;
+            left: 420px;
+            top: 264px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+
+/* Gray */
+
+            color: #72757A;
+        
+           }
+           .print_one_img{
+            position: absolute;
+            width: 64px;
+            height: 18px;
+            left: 540px;
+            top: 70px;
+
+           }
+           .print_two_img{
+            position: absolute;
+            width: 64px;
+            height: 18px;
+            left: 540px;
+            top: 130px;
+
+           }
+           .print_three_img{
+            position: absolute;
+            width: 64px;
+            height: 18px;
+            left: 540px;
+            top: 190px;
+
+           }
+           .print_four_img{
+            position: absolute;
+            width: 64px;
+            height: 18px;
+            left: 540px;
+            top: 260px;
+
+           }
+           .row_one{
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: 630px;
+            top: 80px;
+
+            background: #A9AFB8;               
+           }
+           .row_two{
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: 640px;
+            top: 80px;
+
+            background: #A9AFB8;               
+           }
+           .row_three{
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: 650px;
+            top: 80px;
+
+            background: #A9AFB8;               
+           }
+           .row_four{
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: 630px;
+            top: 140px;
+
+            background: #A9AFB8;               
+           }
+           .row_five{
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: 640px;
+            top: 140px;
+
+            background: #A9AFB8;               
+           }
+           .row_six{
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: 650px;
+            top: 140px;
+
+            background: #A9AFB8;               
+           }
+           .row_seven{
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: 630px;
+            top: 200px;
+
+            background: #A9AFB8;               
+           }
+           .row_eight{
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: 640px;
+            top: 200px;
+
+            background: #A9AFB8;               
+           }
+           .row_nine{
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: 650px;
+            top: 200px;
+
+            background: #A9AFB8;               
+           }
+           .row_ten{
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: 630px;
+            top: 270px;
+
+            background: #A9AFB8;               
+           }
+           .row_eleven{
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: 640px;
+            top: 270px;
+
+            background: #A9AFB8;               
+           }
+           .row_twelve{
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            left: 650px;
+            top: 270px;
+
+            background: #A9AFB8;               
+           }
+           .grafic{
+               position: absolute;
+               left: 800px;
+               top: 240px;
+               width: 300px;
+               height: 400px;
+               background-color: #fff;
+               border: 1px solid #333;
+               border-radius: 10px;
+
+           }
+           .grafic:hover{
+            transform: scale(1.04);
+            transition: all 1s ease;
+           }
+           .statistic_text{
+               position: absolute;
+               left: 10px;
+               font-weight: bold;
+               position: absolute;
+               margin: 10px;
+               font-size: 25px;
+           }
+           .chart{
+               position: absolute;
+               width: 300px;
+               height: 700px;
+               top: 50px;
+           }
+           .chart2{
+               position: absolute;
+               width: 300px;
+               height: 700px;
+               top: 190px;
+           }
+           .bank__card{
+            position: absolute;
+            width: 400px;
+            height: 240px;
+            left: 50px;
+            top: 670px;
+
+            background: linear-gradient(247.35deg, #936DFF 0%, #3ED1FF 100%);
+            border-radius: 20px;            
+           }
+           .bank__card:hover{
+            transform: scale(1.04);
+            transition: all 1s ease;
+           }
+  
+           .bank__text{
+            opacity: 0.7;
+            left: 20px;
+            margin: 15px;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+/* identical to box height */
+
+
+            color: #FFFFFF;         
+           }
+           .bank__text__two{
+            position: absolute;
+            top: 30px ;
+            font-weight: 900;
+            left: 10px;
+            margin: 15px;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 26px;
+/* identical to box height */
+
+
+            color: #FFFFFF;         
+           }
+           .vaid{
+               opacity: 0.7;
+            position: absolute;
+            width: 74px;
+            height: 21px;
+            left: 30px;
+            top:  160px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+/* identical to box height */
+
+
+            color: #FFFFFF;
+           }
+           .vaid__two{
+            position: absolute;
+            width: 74px;
+            height: 21px;
+            left: 35px;
+            top:  180px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+/* identical to box height */
+
+
+            color: #FFFFFF;
+           }
+        
+           .name{
+            opacity: 0.7;
+            position: absolute;
+            width: 74px;
+            height: 21px;
+            left: 120px;
+            top:  160px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+/* identical to box height */
+
+
+            color: #FFFFFF;
+           }
+           
+           .name__two{
+            position: absolute;
+            width: 74px;
+            height: 21px;
+            left: 120px;
+            top:  180px;
+
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+/* identical to box height */
+
+
+            color: #FFFFFF;
+           }
+           .circle__one{
+            border-radius: 50%;
+            position: absolute;
+            width: 54px;
+            height: 54px;
+            left: 290px;
+            top:  150px;
+
+            background: #FFFFFF;
+            opacity: 0.4;           
+           }
+           .circle__two{
+            border-radius: 50%;
+            position: absolute;
+            width: 54px;
+            height: 54px;
+            left: 325px;            
+            top: 150px;
+
+            background: #FFFFFF;
+            opacity: 0.4;           
+           }
+           .circle__one:hover{
+            transform: scale(1.04);
+            transition: all 1s ease;
+
+           }
+           .circle__two:hover{
+            transform: scale(1.04);
+            transition: all 1s ease;
+
+           }
+           .code{
+            position: absolute;
+            line-height: 21px;
+               
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            left: 140px;
+            top: 45px;
+            font-size: 30px;
+
+            color: #FFFFFF;            
+           }
+           .code__two{
+            position: absolute;
+            line-height: 21px;
+               
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            left: 295px;
+            top: 52px;
+
+            font-size: 20px;
+
+            color: #FFFFFF;            
+           }
+           .tran__card{
+            position: absolute;
+            width: 400px;
+            height: 50px;
+            left: 50px;
+            top: 920px;
+
+            background: #FFFFFF;
+            border-radius: 20px;
+            border: 1px solid #333;
+            transition: 1s;
+           }
+           
+           .tran__card__text{
+               position: absolute;
+               left: 110px;
+               top: 15px;
+               font-weight: 500px;
+           }
+           .tran__card:hover{
+               background-color:  #01BEFF;
+               color: white;
+               transform: scale(1.04);
+                transition: all 1s ease;
+            
+
+           }
+           .balance{
+               position: absolute;
+               width: 300px;
+               height: 300px;
+               left: 500px;
+               top: 670px;
+               border-radius: 10px;
+               background-color: white;
+               border: 1px solid #333
+           }
+           .balance:hover{
+            transform: scale(1.04);
+            transition: all 1s ease;
+
+           }
+           .balance__h1{
+               position: absolute;
+               left: 15px;
+               top: 15px;
+               font-size: 25px;
+               color: black;
+               font-weight: 800 ;
+           }
+           .balance__text{
+               opacity: 0.6;
+               position: absolute;
+               left: 15px;
+               top: 70px;
+               color: #000000;
+           }
+           .balance__text__two{
+               position: absolute;
+               left: 15px;
+               top: 100px;
+               color: #000000;
+               font-size: 30px;
+               font-weight: 600;
+
+           }
+           .balance__block__one{
+               position: absolute;
+               position: absolute;
+                width: 110px;
+                height: 65px;
+                left: 25px;
+                top: 140px;
+
+                background:  #f5f5f5;
+                border-radius: 10px;                
+           }
+           .balance__block__one:hover{
+               color: white;
+               background-color: #0E6EFF;
+               transform: scale(1.04);
+            transition: all 1s ease;
+           }
+           .balance__block__text__two{
+               position: absolute;
+               left: 10px;
+               top: 30px;
+               font-size: 20px;
+               font-weight: 600px;
+           }
+           .balance__block__text{
+               position: absolute;
+               opacity: 0.6;
+               left: 10px;
+               top: 5px;
+           }
+
+
+           .balance__block__two{
+               position: absolute;
+               
+                width: 110px;
+                height: 65px;
+                left: 160px;
+                top: 140px;
+
+                background:  #f5f5f5;
+                border-radius: 10px;                
+           }
+           .balance__block__two:hover{
+               color: white;
+               background-color: #0E6EFF;
+               transform: scale(1.04);
+            transition: all 1s ease;
+           }
+           .balance__block__two__text__two{
+               position: absolute;
+               left: 10px;
+               top: 30px;
+               font-size: 20px;
+               font-weight: 600px;
+           }
+           .balance__block__two__text{
+               position: absolute;
+               opacity: 0.6;
+               left: 10px;
+               top: 5px;
+           }
+           .balance__block__three{
+               position: absolute;
+               
+                width: 110px;
+                height: 65px;
+                left: 25px;
+                top: 220px;
+
+                background:  #f5f5f5;
+                border-radius: 10px;                
+           }
+           .balance__block__three:hover{
+               color: white;
+               background-color: #0E6EFF;
+               transform: scale(1.04);
+            transition: all 1s ease;
+           }
+           .balance__block__three__text__two{
+               position: absolute;
+               left: 10px;
+               top: 30px;
+               font-size: 20px;
+               font-weight: 600px;
+           }
+           .balance__block__three__text{
+               position: absolute;
+               opacity: 0.6;
+               left: 10px;
+               top: 5px;
+           }
+           .balance__block__four{
+               position: absolute;
+               
+                width: 110px;
+                height: 65px;
+                left: 160px;
+                top: 220px;
+
+                background:  #f5f5f5;
+                border-radius: 10px;
+                transition: 1s;                
+           }
+           .balance__block__four:hover{
+               color: white;
+               background-color: #0E6EFF;
+               transform: scale(1.04);
+            transition: all 1s ease;
+           }
+           .balance__block__four__text__two{
+               position: absolute;
+               left: 10px;
+               top: 30px;
+               font-size: 20px;
+               font-weight: 600px;
+           }
+           .balance__block__four__text{
+               position: absolute;
+               opacity: 0.6;
+               left: 10px;
+               top: 5px;
+           }
+
+           .activity{
+               position: absolute;
+               width: 300px;
+               height: 300px;
+               left: 350px;
+               top: px;
+               border-radius: 10px;
+               background-color: white;
+               border: 1px solid #333
+           }
+           .activity:hover{
+            transform: scale(1.04);
+            transition: all 1s ease;
+
+           }
+
+           .activity__h1{
+               opacity: 0.6;
+               position: absolute;
+               left: 15px;
+               top: 20px;
+               color: #000000;
+           }
+           .activity__text{
+               position: absolute;
+               left: 15px;
+               top: 50px;
+               font-size: 25px;
+               font-weight: 600;
+               color: #000000;
+           }
+           .activity__green__block{
+               position: absolute;
+               top: 130px;
+               left: 30px;
+               width: 30px;
+               height: 110px;
+               background-color:   #03B664 ;
+               
+           }
+           .green__number{
+               border-radius: 0 0 10px;
+               position: absolute;
+               left: 30px;
+               top: 110px;
+           }
+           .activity__red__block{
+               position: absolute;
+               top: 110px;
+               left: 80px;
+               width: 30px;
+               height: 130px;
+               background-color:  #FF684D;
+               
+           }
+           .red__number{
+               border-radius: 0 0 10px;
+               position: absolute;
+               left: 80px;
+               top: 90px;
+           }
+           .activity__blue__block{
+               position: absolute;
+               top: 140px;
+               left: 135px;
+               width: 30px;
+               height: 100px;
+               background-color:  #01BEFF;
+               
+           }
+           .blue__number{
+               border-radius: 0 0 10px;
+               position: absolute;
+               left: 135px;
+               top: 120px;
+           }
+           .sun{
+                opacity: 0.6;
+               position: absolute;
+               left: 32px;
+               top: 245px;
+               color: #000000;
+
+
+           }
+           .mon{
+                opacity: 0.6;
+               position: absolute;
+               left: 82px;
+               top: 245px;
+               color: #000000;
+
+
+           }
+           .tue{
+                opacity: 0.6;
+               position: absolute;
+               left: 140px;
+               top: 245px;
+               color: #000000;
+
+
+           }
+           .mini__green{
+                border-radius: 3px;
+               position: absolute;
+               left: 195px;
+               top: 120px;
+               width: 40px;
+               height: 10px;
+               background-color:  #00D171;
+           }
+           .mini__text{
+               position: absolute;
+               left: 180px;
+               top: 130px;
+           }
+           .mini__red{
+                border-radius: 3px;
+               position: absolute;
+               left: 195px;
+               top: 160px;
+               width: 40px;
+               height: 10px;
+               background-color:  #FF684D;
+           }
+           .mini__red__text{
+               position: absolute;
+               left: 180px;
+               top: 170px;
+           }
+           .mini__blue{
+               border-radius: 3px;
+               position: absolute;
+               left: 195px;
+               top: 200px;
+               width: 40px;
+               height: 10px;
+               background-color: #01BEFF  ;
+           }
+           .mini__blue__text{
+               position: absolute;
+               left: 180px;
+               top: 210px;
+           }
+        
+        
+        
+
+
+       
+     
+     
+     
+     
+     
+     
+     
+     
+     
+          
+          
+          
+
+         
+
+
+
+
+           
+
+
+
+
+           
+
+         
+
+
+
+       
+      
+      
+
+         
+
+
+
+
+           
+
+
+
+
+           
+
+         
+
+
+
+       
+      
+      
+
+
+
+
+
+    </style>
+    <div class="wrap">
+        <div class="container">
+            <div class="header" id="header">
+            <div class="text__dash">Dashboard</div>
+            
+            <input type="text" class="inp" placeholder="Search here...">
+            <div class="image__block">
+            <div class="image">
+                <img src="search.png" alt="">
+            </div>
+        </div>
+        <div class="image__block__one">
+            <div class="image__bell">
+                <img src="bell.png" alt="">
+            </div>
+        </div>
+        <div class="five__block">
+            <div class="five">5</div>
+
+        </div>
+        <div class="image__block__two">
+            <div class="image__mail">
+                <img src="mail.png" alt="">
+            </div>
+            <div class="twenthree__block">
+                <div class="twenthree">23</div>
+    
+            </div>
+        </div>
+        <div class="login">
+            <div class="login__img">
+            <img src="Rectangle 14.png" alt="">
+        </div>
+        <div class="login_text">HiMaksym</div>
+        <div class="log">
+        <div class="login_text_two">maksym@gmail.com</div>
+    </div>
+        </div>
+        <div class="bloces">
+            <div class="green">
+                
+                
+                    <div class="green__img">
+                    <img src="green.png" alt="">
+                </div>
+                <div class="green__text">32,568</div>
+                <div class="green__text__two">Total Invoices</div>
+                <div class="green__block"></div>
+           
+                
+            </div>
+            <div class="blue">
+                
+                
+                <div class="blue__img">
+                <img src="blue.png" alt="">
+            </div>
+            <div class="blue2__img">
+                <img src="blue2.png" alt="">
+            </div>
+            <div class="blue__text">8,558</div>
+            <div class="blue__text__two">Paid Invoices</div>
+            <div class="blue__block"></div>
+       
+            
+        </div>
+        <div class="yellow">
+                
+                
+            <div class="yellow__img">
+            <img src="yellow.png" alt="">
+        </div>
+        <div class="yellow2__img">
+            <img src="yellow2.png" alt="">
+        </div>
+        <div class="yellow__text">2,566</div>
+        <div class="yellow__text__two">Unpaid Invoices</div>
+        <div class="yellow__block"></div>
+   
+        
+    </div>
+    <div class="red">
+                
+                
+        <div class="red__img">
+        <img src="red.png" alt="">
+    </div>
+    <div class="red2__img">
+        <img src="red2.png" alt="">
+    </div>
+    <div class="red3__img">
+        <img src="red3.png" alt="">
+    </div>
+    
+    <div class="red__text">668</div>
+    <div class="red__text__two">Total Invoices sent</div>
+    <div class="red__block"></div>
+
+    
+</div>
+
+        </div>
+        <div class="transaction">
+           <div class="trans__h1">
+               <h1>fhbf</h1>
+            </div>
+            <div class="blue-block">
+            </div>
+            <div class="blue-block-text">#KLA-237-393-950</div>
+            <div class="blue-block-text-two">CodeAstrology.com</div>
+            <div class="yellow-block">
+            </div>
+            <div class="yellow-block-text">#KLA-237-393-950</div>
+            <div class="yellow-block-text-two">HSJ Express.com</div>
+            <div class="green-block">
+            </div>
+            <div class="green-block-text">#KLA-237-393-950</div>
+            <div class="green-block-text-two">Inventiveshamim.Inc</div>
+            <div class="red-block">
+            </div>
+            <div class="red-block-text">#KLA-237-393-950</div>
+            <div class="red-block-text-two">Avadaforlife.Inc</div>
+            <div class="amount"></div>
+        <div class="amount__img">
+            <img src="amauntblue.png" alt="">
+        </div>
+        <div class="amount_text">$ 4,67,859</div>
+        <div class="amount_text_one">Amount</div>
+      
+        <div class="amount__yellow"></div>
+        <div class="amount__yellow__img">
+            <img src="amauntyellow.png" alt="">
+        </div>
+        <div class="amount_yellow_text">$89,859</div>
+        <div class="amount_yellow_text_one">Amount</div>
+
+        <div class="amount__red"></div>
+        <div class="amount__red__img">
+            <img src="amauntred.png" alt="">
+        </div>
+        <div class="amount_red_text">$ 3,43,67,859</div>
+        <div class="amount_red_text_one">Amount</div>
+
+
+        
+        <div class="amount__green"></div>
+        <div class="amount__green__img">
+            <img src="amauntgreen.png" alt="">
+        </div>
+        <div class="amount_green_text">$ 2,07,859</div>
+        <div class="amount_green_text_one">Amount</div>
+
+        <div class="ago_one_text"> 5 min ago</div>
+        <div class="ago_two_text"> 5 min ago</div>
+        <div class="ago_three_text"> 5 min ago</div>
+        <div class="ago_four_text"> 5 min ago</div>
+
+        <div class="print_one_img">
+            <img src="printer.png" alt="">
+        </div>
+        <div class="print_two_img">
+            <img src="printer.png" alt="">
+        </div>
+        <div class="print_three_img">
+            <img src="printer.png" alt="">
+        </div>
+        <div class="print_four_img">
+            <img src="printer.png" alt="">
+        </div>
+        <div class="row_one"></div>
+        <div class="row_two"></div>
+        <div class="row_three"></div>
+        <div class="row_four"></div>
+        <div class="row_five"></div>
+        <div class="row_six"></div>
+        <div class="row_seven"></div>
+        <div class="row_eight"></div>
+        <div class="row_nine"></div>
+        <div class="row_ten"></div>
+        <div class="row_eleven"></div>
+        <div class="row_twelve"></div>
+            
+        
+        
+
+        </div>
+        <div class="grafic">
+            <div class="statistic_text">Statistics</div>
+            <div class="chart">
+                <canvas id="myChart"></canvas>
+              </div>
+              <div class="chart2">
+                <canvas id="myChart2"></canvas>
+              </div>
+
+            
+
+        </div>
+        <div class="bank__card">
+            <div class="bank__text">balance</div>
+            <div class="bank__text__two">42,678</div>
+            <div class="vaid">vaid Thuru</div>
+            <div class="vaid__two">03/03</div>
+            <div class="name">name</div>
+            <div class="name__two">john bier</div>
+            <div class="circle__one"></div>
+            <div class="circle__two"></div>
+            <div class="code">....................</div>
+            <div class="code__two">3567</div>
+        </div>
+        <div class="tran__card">
+            <div class="tran__card__text">Your money  is growing</div>
+        </div>
+        <div class="balance">
+            <div class="balance__h1">balance deteils</div>
+            <div class="balance__text">Total balance</div>
+            <div class="balance__text__two">223,456</div>
+            <div class="balance__block__one">
+                <div class="balance__block__text">last month</div>
+                <div class="balance__block__text__two">$14,897</div>
+            </div>
+            <div class="balance__block__two">
+                <div class="balance__block__two__text">expres</div>
+                <div class="balance__block__two__text__two">$14,897</div>
+            </div>
+            <div class="balance__block__three">
+                <div class="balance__block__three__text">Taxes</div>
+                <div class="balance__block__three__text__two">$245,8</div>
+            </div>
+            <div class="balance__block__four">
+                <div class="balance__block__four__text">Debit</div>
+                <div class="balance__block__four__text__two">$355,8</div>
+            </div>
+
+            <div class="activity">
+                <div class="activity__h1">Activity</div>
+                <div class="activity__text">$42,384</div>
+                <div class="green__number">287</div>
+                <div class="red__number">312</div>
+                <div class="blue__number">176</div>
+                <div class="activity__green__block"></div>
+                <div class="activity__red__block"></div>
+                <div class="activity__blue__block"></div>
+                <div class="sun">sun</div>
+                <div class="mon">mon</div>
+                <div class="tue">tue</div>
+                <div class="mini__green"></div>
+                <div class="mini__text">dolore sit amet</div>
+                <div class="mini__red"></div>
+                <div class="mini__red__text">dolore sit amet</div>
+                <div class="mini__blue"></div>
+                <div class="mini__blue__text">dolore sit amet</div>
+            </div>
+
+
+
+            
+        </div>
+       
+
+        
+        
+            </div>
+            
+         
+          
+        </div>
+       
+    </div>
+   
+
+        
+      
+        
+        <div class="menu__bar">
+            <div class="logo">
+                <h1 class="logo__text">Pelio</h1>
+                <div class="dashboard">
+                    <div class="home__img">
+                        <img src="Vector.png">
+                    </div>
+                    <div class="text">Dashboard</div>
+                </div>
+            </div>
+         
+                <div class="menu__bar__block">
+                    <div class="block__one">
+                    <div class="walet__img">
+                        <img src="Vector (3).png" alt="">
+                        
+                    </div>
+                    <div class="walet__text">mywalet</div>
+                </div>
+                <br>
+                <div class="block__two">
+                    <div class="card__img">
+                        <img src="Vector (1).png" alt="">
+                        
+                    </div>
+                    <div class="card__text">Payment</div>
+                </div>
+                
+                <div class="block__three">
+                    <div class="doc__img">
+                        <img src="Vector (2).png" alt="">
+                        
+                    </div>
+                    <div class="doc__text">Invoice</div>
+                </div>
+                <div class="block__four">
+                    <div class="set__img">
+                        <img src="Vectorset.png" alt="">
+                        
+                    </div>
+                    <div class="set__text">Setting</div>
+                </div>
+                <div class="block__five">
+                    <div class="img">
+                    <div class="tran__img">
+                        <img src="Vec.png" alt="">
+
+                        
+                    </div>
+                </div>
+                    <div class="tran__text">transaction</div>
+                 
+                </div>
+                <div class="block__six">
+                    
+                    <div class="footer__text">Payment Admin Dashboard</div>
+               
+                    <div class="h1">2022- 2023 al right reserved</div>
+                    <div class="h2">Made by Hnap Maksym</div>
+
+                </div>
+               
+               
+                    
+
+                </div>
+            </div>
+  
+        
+   
+        
+        
+                  
+      
+       
+
+    </div>
+    <script>
+         const labels = [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+        ];
+      
+        const data = {
+          labels: labels,
+          datasets: [{
+            label: 'Мій заробіток',
+            backgroundColor: '#e8e81c',
+            borderColor: '#e8e81c',
+            data: [100, 200, 300,200, 400,300, 500,600,700],
+          }]
+        };
+      
+        const config = {
+          type: 'line',
+          data: data,
+          options: {}
+        };
+        const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+  const labels2 = [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+        ];
+      
+        const data2 = {
+          labels: labels2,
+          datasets: [{
+            label: 'Мої трати',
+            backgroundColor: '#e8e81c',
+            borderColor: '#e8e81c',
+            data: [100, 200, 300,200, 400,300, 500,600,700],
+          }]
+        };
+      
+        const config2 = {
+          type: 'line',
+          data: data,
+          options: {}
+        };
+        const myChart2 = new Chart(
+    document.getElementById('myChart2'),
+    config2
+  );
+
+
+
+
+
+
+
+  
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
